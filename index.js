@@ -1,9 +1,17 @@
 const express = require("express");
+const path=require("path")
 const { getFriends, friendsUID, homePage, pageNotFound } = require("./controllers/friends.controller");
 const { middleware } = require("./middlewares/basic_middleware");
 const {friends} = require("./Models/friends.model.js");
 const { friendsRouter } = require("./routes/friends.routes");
 const app = express();
+var hbs=require("hbs")
+
+// Hbs initialization
+
+app.set('view engine','hbs')
+
+app.set('views',"./views")
 
 //MiddleWares
 

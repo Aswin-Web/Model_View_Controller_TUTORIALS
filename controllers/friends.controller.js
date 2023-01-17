@@ -28,7 +28,7 @@ function getFriends(req, res)  {
   }
 
   function pageNotFound(req, res)  {
-    res.send("Page not found");
+    res.render("index")
   }
 
   module.exports={
